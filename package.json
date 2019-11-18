@@ -1,0 +1,24 @@
+{
+  "name": "mindfulpuss.com",
+  "version": "1.0.0",
+  "description": "Static site source code for mindfulpuss.com",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx eleventy",
+    "start": "npx eleventy --serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aliblackwell/mindfulpuss.com.git"
+  },
+  "author": "Alasdair Blackwell",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aliblackwell/mindfulpuss.com/issues"
+  },
+  "homepage": "https://github.com/aliblackwell/mindfulpuss.com#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.9.0"
+  }
+}

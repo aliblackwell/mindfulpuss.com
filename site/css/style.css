@@ -1,0 +1,92 @@
+:root {
+  --teal: #008080;
+  --teal-darker: #006060;
+  --copper: #B87333;
+  --border-width: 0.5rem;
+  --container-width: 1100px;
+  --default-px-20: 20px;
+  --bold-italic: noto-sans-display-semiconden, sans-serif;
+
+}
+
+@media (max-width: 1140px) {
+  :root {
+    --container-width: 90%;
+  }
+}
+
+@media (max-width: 900px) {
+  :root {
+    --default-px-20: 18px;
+  }
+}
+
+@media (max-width: 600px) {
+  :root {
+    --default-px-20: 16px;
+  }
+}
+
+body,
+html {
+  margin: 0;
+  width: 100%;
+  min-height: 100%;
+}
+
+html {
+  font-size: var(--default-px-20);
+}
+
+body {
+  min-height: 100%;
+  color: var(--copper);
+  background: var(--teal);
+  height: 100%;
+  text-align: center;
+}
+
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+}
+
+main {
+  margin: 0px auto;
+}
+
+header {
+  width: 100%;
+  border-top: var(--border-width) solid var(--copper);
+  background: var(--teal-darker);
+  color: white;
+  line-height: 1;
+  padding: 1rem 0 0.75rem;
+}
+header h2 {
+  font-family: var(--bold-italic);
+  font-weight: 700;
+  font-style: italic;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  border-bottom: var(--border-width) solid var(--copper);
+}
+h1.logo {
+  width: 15rem;
+  margin: 0;
+}
+nav ul,
+nav li {
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+}
+
+footer {
+  width: 100%;
+  background: var(--copper);
+}
