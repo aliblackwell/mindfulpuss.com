@@ -38,12 +38,12 @@ metadata:
     <itunes:summary>{{ podcast.data.summary }}</itunes:summary>
     <description>{{ podcast.data.description }}</description>
     <link>{{ absolutePodcastUrl }}</link>
-    <enclosure url="http://www.mindfulpuss.com/inaugral-podcast/podcast.mp3" type="audio/mpeg" length="1024"></enclosure>
+    <enclosure url="https://www.mindfulpuss.com{{podcast.data.file}}" type="audio/mpeg" length="1024"></enclosure>
     <pubDate>{{ podcast.date | rssDate }}</pubDate>
     <itunes:author>{{ metadata.author.name }}</itunes:author>
     <itunes:duration>00:32:16</itunes:duration>
     <itunes:explicit>no</itunes:explicit>
     <guid>http://www.mindfulpuss.com{{podcast.data.permalink}}</guid>
+    {% endfor %}
   </item>
-  {%- endfor %}
 </feed>

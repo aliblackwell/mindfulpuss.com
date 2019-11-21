@@ -5,6 +5,7 @@ module.exports = function(config) {
   config.addPassthroughCopy("./site/css")
   config.addPassthroughCopy("./site/img")
   config.addPassthroughCopy("./site/js")
+  config.addPassthroughCopy("./site/podcast-files")
   config.addPassthroughCopy("./site/_redirects")
   config.addPassthroughCopy("./site/humans.txt")
   config.addPassthroughCopy("./site/favicon.png")
