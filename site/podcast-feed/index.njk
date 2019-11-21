@@ -29,8 +29,8 @@ metadata:
     <itunes:email>{{ metadata.author.email }}</itunes:email>
 </itunes:owner>
 <itunes:explicit>no</itunes:explicit>
-<itunes:image href="http://www.mindfulpuss.com/podcast-icon.jpg" />
-<itunes:category text="Mindfulness"/>
+<itunes:image href="http://www.mindfulpuss.com/podcast-icon.png" />
+<itunes:category text="Mindfulness"></itunes:category>
   {%- for podcast in collections.podcasts %}
   {% set absolutePodcastUrl %}{{ podcast.url | url | absoluteUrl(metadata.url) }}{% endset %}
   <item>
@@ -43,6 +43,7 @@ metadata:
     <itunes:author>{{ metadata.author.name }}</itunes:author>
     <itunes:duration>00:32:16</itunes:duration>
     <itunes:explicit>no</itunes:explicit>
+    <itunes:category text="Mindfulness"></itunes:category>
     <guid>http://www.mindfulpuss.com{{podcast.data.permalink}}</guid>
     {% endfor %}
   </item>
