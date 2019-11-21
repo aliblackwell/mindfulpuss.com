@@ -17,7 +17,7 @@ metadata:
 <?xml version="1.0" encoding="utf-8"?>
 <rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
 <channel>
-<title>{{ metadata.title }}t</title>
+<title>{{ metadata.title }}</title>
 <link href="{{ metadata.url }}"/>
 <language>en-gb</language>
 <itunes:subtitle>{{ metadata.feed.subtitle }}</itunes:subtitle>
@@ -29,8 +29,10 @@ metadata:
     <itunes:email>{{ metadata.author.email }}</itunes:email>
 </itunes:owner>
 <itunes:explicit>no</itunes:explicit>
+<itunes:category text="Religion & Spirituality">
+  <itunes:category text="Spirituality"/>
+</itunes:category>
 <itunes:image href="http://www.mindfulpuss.com/podcast-icon.png" />
-<itunes:category text="Mindfulness"></itunes:category>
   {%- for podcast in collections.podcasts %}
   {% set absolutePodcastUrl %}{{ podcast.url | url | absoluteUrl(metadata.url) }}{% endset %}
   <item>
@@ -43,7 +45,6 @@ metadata:
     <itunes:author>{{ metadata.author.name }}</itunes:author>
     <itunes:duration>00:32:16</itunes:duration>
     <itunes:explicit>no</itunes:explicit>
-    <itunes:category text="Mindfulness"></itunes:category>
     <guid>http://www.mindfulpuss.com{{podcast.data.permalink}}</guid>
     {% endfor %}
   </item>
