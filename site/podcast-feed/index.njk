@@ -8,7 +8,7 @@ metadata:
     email: meow@mindfulpuss.com
   feed:
     subtitle: The official Mindfulpuss podcast
-    description: 
+    description: Get ready for a world of cat-themed mindfulness
     filename: podcast.xml
     path: podcast-feed/index.xml
     url: https://www.mindfulpuss.com/podcast.xml
@@ -30,7 +30,7 @@ metadata:
 </itunes:owner>
 <itunes:explicit>no</itunes:explicit>
 <itunes:image href="http://www.mindfulpuss.com/podcast-icon.jpg" />
-<itunes:category text="Mindfulness"></itunes:category>
+<itunes:category text="Mindfulness"/>
   {%- for podcast in collections.podcasts %}
   {% set absolutePodcastUrl %}{{ podcast.url | url | absoluteUrl(metadata.url) }}{% endset %}
   <item>
