@@ -20,5 +20,8 @@
   "homepage": "https://github.com/aliblackwell/mindfulpuss.com#readme",
   "devDependencies": {
     "@11ty/eleventy": "^0.9.0"
+  },
+  "dependencies": {
+    "@11ty/eleventy-plugin-rss": "^1.0.7"
   }
 }

@@ -1,0 +1,49 @@
+---
+permalink: podcast.xml
+metadata:
+  title: Mindfulpuss
+  url: https://www.mindfulpuss.com
+  author:
+    name: Mindfulpuss
+    email: meow@mindfulpuss.com
+  feed:
+    subtitle: The official Mindfulpuss podcast
+    description: 
+    filename: podcast.xml
+    path: podcast-feed/index.xml
+    url: https://www.mindfulpuss.com/podcast.xml
+    id: https://www.mindfulpuss.com
+---
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
+<channel>
+<title>{{ metadata.title }}t</title>
+<link href="{{ metadata.url }}"/>
+<language>en-gb</language>
+<itunes:subtitle>{{ metadata.feed.subtitle }}</itunes:subtitle>
+<itunes:author>{{ metadata.author.name }}</itunes:author>
+<itunes:summary>{{ metadata.feed.description }}</itunes:summary>
+<description>{{ metadata.feed.description }}</description>
+<itunes:owner>
+    <itunes:name>{{ metadata.author.name }}</itunes:name>
+    <itunes:email>{{ metadata.author.email }}</itunes:email>
+</itunes:owner>
+<itunes:explicit>no</itunes:explicit>
+<itunes:image href="http://www.mindfulpuss.com/podcast-icon.jpg" />
+<itunes:category text="Mindfulness"/></itunes:category>
+  {%- for podcast in collections.podcasts %}
+  {% set absolutePodcastUrl %}{{ podcast.url | url | absoluteUrl(metadata.url) }}{% endset %}
+  <item>
+    <title>{{ podcast.data.title }}</title>
+    <itunes:summary>{{ podcast.data.summary }}</itunes:summary>
+    <description>{{ podcast.data.description }}</description>
+    <link>{{ absolutePodcastUrl }}</link>
+    <enclosure url="http://www.mindfulpuss.com/inaugral-podcast/podcast.mp3" type="audio/mpeg" length="1024"></enclosure>
+    <pubDate>{{ podcast.date | rssDate }}</pubDate>
+    <itunes:author>{{ metadata.author.name }}</itunes:author>
+    <itunes:duration>00:32:16</itunes:duration>
+    <itunes:explicit>no</itunes:explicit>
+    <guid>http://www.mindfulpuss.com{{podcast.data.permalink}}</guid>
+  </item>
+  {%- endfor %}
+</feed>

@@ -1,9 +1,9 @@
 ---
 title: Mindfulpuss
 subtitle: Live in the meow
-layout: layouts/holding.njk 
+layout: layouts/home.njk 
 language: 'en'
-permalink: '/'
+permalink: '/home/'
 dir: 'ltr'
 ---
 
