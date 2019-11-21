@@ -18,7 +18,7 @@ metadata:
 <rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
 <channel>
 <title>{{ metadata.title }}</title>
-<link href="{{ metadata.url }}"/>
+<link>{{ metadata.url }}</link>
 <language>en-gb</language>
 <itunes:subtitle>{{ metadata.feed.subtitle }}</itunes:subtitle>
 <itunes:author>{{ metadata.author.name }}</itunes:author>
@@ -43,7 +43,7 @@ metadata:
     <enclosure url="https://www.mindfulpuss.com{{podcast.data.file}}" type="audio/mpeg" length="1024"></enclosure>
     <pubDate>{{ podcast.date | rssDate }}</pubDate>
     <itunes:author>{{ metadata.author.name }}</itunes:author>
-    <itunes:duration>00:32:16</itunes:duration>
+    <itunes:duration>{{podcast.data.duration}}</itunes:duration>
     <itunes:explicit>no</itunes:explicit>
     <guid>http://www.mindfulpuss.com{{podcast.data.permalink}}</guid>
     {% endfor %}
