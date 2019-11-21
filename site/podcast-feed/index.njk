@@ -30,7 +30,7 @@ metadata:
 </itunes:owner>
 <itunes:explicit>no</itunes:explicit>
 <itunes:image href="http://www.mindfulpuss.com/podcast-icon.jpg" />
-<itunes:category text="Mindfulness"/></itunes:category>
+<itunes:category text="Mindfulness"></itunes:category>
   {%- for podcast in collections.podcasts %}
   {% set absolutePodcastUrl %}{{ podcast.url | url | absoluteUrl(metadata.url) }}{% endset %}
   <item>
@@ -46,4 +46,5 @@ metadata:
     <guid>http://www.mindfulpuss.com{{podcast.data.permalink}}</guid>
     {% endfor %}
   </item>
-</feed>
+</channel>
+</rss>
